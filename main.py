@@ -15,6 +15,9 @@ WATI_API_KEY = os.getenv("WATI_API_KEY")
 WATI_BASE_URL = os.getenv("WATI_BASE_URL")
 
 
+@app.get("/")
+async def read_root():
+    return {"message": "Hello, World!"}
 
 @app.post("/webhook")
 async def wati_webhook(request: Request):
