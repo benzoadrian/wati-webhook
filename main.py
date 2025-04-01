@@ -14,6 +14,8 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 WATI_API_KEY = os.getenv("WATI_API_KEY")
 WATI_BASE_URL = os.getenv("WATI_BASE_URL")
 
+
+
 @app.post("/webhook")
 async def wati_webhook(request: Request):
     data = await request.json()
